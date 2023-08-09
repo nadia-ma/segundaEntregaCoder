@@ -8,48 +8,128 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <!---NO BORRAR - estilos css-->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!---NO BORRAR - cdn de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <a href="./index.html"><img class="logo" src="./img/lumina-logo.png" alt="Logotipo"></a>
-        <div>
-            <!---Inicio Menu-->
-            <nav>
-                <ul class="identificacion">
-                    <li><a href="./pages/cuenta.html">Inicia sesión |</a></li>
-                    <li><a href="./pages/cuenta.html">Registrate</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <nav>               
-            <ul class="menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/nosotros.html">Quienes somos</a></li>
-                <li><a href="./pages/joyas.html">Joyas</a></li>
-                <li><a href="./pages/joyeros.html">Joyeros</a></li>
-                <li><a href="./pages/blog.html">Blog</a></li>
-            </ul>
+        <!---Inicio Menu-->
+        <nav class="navbar navbar-expand-lg mainBg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="../img/lumina-logo.png" alt="Logo" width="180" height="50" class="d-inline-block align-text-center ms-3"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./joyas.html">Joyas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./joyeros.html">Joyeros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cuenta.html">
+                                <img src="../img/avatar.png" alt="usuario" class="usuario">
+                            </a>
+                        </li>
+                    </span>
+                </div>
+            </div>
         </nav>
     </header>
     <!---Fin Menu-->
+
     <!---Inicio Contenido-->
-    <main>
-        <h1 class="titulo">Cuenta</h1>
-        <section>
-        </section>
+    <main> 
+        <h1 class="titulo">Identificación</h1>
+
+        <div class="containerUsuario">
+            <h2 class="tituloRegistrate">Registrate</h2>
+            <section class="formularioRegistro">
+                <form action="">
+                    <fieldset>
+                        <div>
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="surname">Apellido</label>
+                            <input type="text" name="surname">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Email*</label>
+                            <input type="email" required name="email" placeholder="juan@gmail.com">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="password" >Contraseña</label>
+                            <input type="password" required name="password">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="nac">Fecha de nacimiento</label>
+                            <input type="date" name="nac">
+                        </div>
+                        <div>
+                            <label for="condiciones"></label><br>
+                            <input type="radio" name="condiciones" value="fem" required name="condiciones">Acepto terminos y condiciones
+                        </div>
+                        <br>
+                        <input type="submit" value="Registarse">
+                        <input type="reset" value="Borrar datos">
+                    </fieldset>
+                </form>
+            
+            </section>
+
+            <h2 class="tituloInicio">Inicia sesión</h2>
+            <section  class="formularioInicio">
+                <form action="">
+                    <fieldset>
+                        <div>
+                            <label for="email">Email*</label>
+                            <input type="email" required name="email" placeholder="juan@gmail.com">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="password" >Contraseña</label>
+                            <input type="password" name="password">
+                        </div>
+                        <br>
+                        <input type="submit" value="Iniciar sesión">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
     </main>
     <!---Inicio Contenido-->
     <footer>
-        <a href="./index.html"><img src="./img/lumina-logo.png" alt="Logotipo Lumina"></a>
+        <a href="../index.html">
+            <img src="../img/lumina-logo.png" alt="Logo" class="d-inline-block textoLogo"></a>
         <ul class="pie">
-            <li><a class="negrita" href="./pages/nosotros.html">Quienes somos</a></li>
-            <li><a class="negrita" href="./pages/blog.html">Blog</a><li>
+            <li><a class="negrita" href="./nosotros.html">Quienes somos</a></li>
+            <li><a class="negrita" href="./blog.html">Blog</a><li>
             <br>
             <li class="negrita">Mi cuenta:</li>
-            <li><a href="./pages/cuenta.html">Inicia sesión</a></li>
-            <li><a href="./pages/cuenta.html">Registrate</a></li>
+            <li><a href="./cuenta.html">Inicia sesión</a></li>
+            <li><a href="./cuenta.html">Registrate</a></li>
         </ul>
 
         <ul class="pie">
@@ -61,5 +141,8 @@
             <li>✉︎ lumina.joyas@gmail.com</li>
         </ul>
     </footer>
+
+ <!---NO BORRAR - script de bootstrap-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
