@@ -8,6 +8,7 @@ body{
     padding-bottom: 0;
     font-family: 'Lato', sans-serif;
 }
+
 .bg{
     background-color: #eaeaea;
 }
@@ -396,4 +397,35 @@ height: 34rem;
 .formularioInicio{
     grid-area: formularioInicio;
     font-size: 18px;
+}
+
+@media(max-width:360px){
+    .tarjeta{
+        margin: 0;
+    }
+    .icono{
+        width: 160px;
+    }
+    .subtitulo{
+        margin: 1rem 1rem;
+        font-size: 25px;
+    }
+    .tarjeta2{
+        margin: 1rem 1rem;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .pie{
+        text-align: center;
+        padding-left: 0;
+    }
+    .titulo-vitrina{
+        font-size: 15px;
+    }
+    .vitrina{
+        height: 200px;
+        object-fit: cover;
+    }
 }
