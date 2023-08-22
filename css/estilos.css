@@ -189,7 +189,7 @@ footer img{
 .containerSomos{
     font-family: 'Lato', sans-serif;
     width: 100vw;
-    height: 90vh;
+    height: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 0.1fr 2fr;
@@ -412,9 +412,6 @@ height: 34rem;
     .tarjeta2 p{
         font-size: 1.1rem;
     }
-    .tarjeta{
-        margin: 0;
-    }
     .icono{
         width: 160px;
     }
@@ -445,6 +442,29 @@ height: 34rem;
         width: 100%;
         margin: 0 2rem;
         border-radius: 5px;
+    }
+    .containerSomos{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 0.5fr 0fr 0fr;
+        grid-template-areas:
+            "imgperfil"
+            "somos"
+            "tituloVentajas"
+            "ventajas";
+    }
+    .imgperfil{
+        width: auto;
+    }
+    .tituloVentajas{
+        font-size: 30px;
+    }
+    .tarjeta{
+        margin: 0 2rem;
+        font-size: 18px;
+    }
+    .tarjeta h3{
+        font-size: 20px;
     }
 }
 
@@ -500,6 +520,22 @@ height: 34rem;
         margin: 0 2rem 1rem 2rem;
         border-radius: 5px;
     }
+    .containerSomos{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 0.5fr 0fr 0fr;
+        grid-template-areas:
+            "imgperfil"
+            "somos"
+            "tituloVentajas"
+            "ventajas";
+    }
+    .imgperfil{
+        width: auto;
+    }
+    .tarjeta{
+        margin: 0 2rem;
+    }
 }
 
 @media (min-width:768px){
@@ -528,6 +564,9 @@ height: 34rem;
     }
     .imgJoyeros{
         width: 31%;
+    }
+    .tarjeta{
+        margin: 0 4.5rem;
     }
 }
 
@@ -566,5 +605,22 @@ height: 34rem;
     }
     .banner img{
         width: 88%;   
+    }
+    .containerSomos{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 0.1fr;
+        grid-auto-columns: 2fr;
+        grid-auto-flow: row;
+        gap: 15px;
+        grid-template-areas:
+        "somos imgperfil"
+        "tituloVentajas tituloVentajas"
+        "ventajas ventajas";
+    }
+    .ventajas{
+        flex-wrap: nowrap;
+    }
+    .tarjeta{
+        margin: 0;
     }
 }
