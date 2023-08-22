@@ -173,6 +173,7 @@ footer img{
     background-color: white;
     border-radius: 50px;
     border-color: darkslateblue;
+    transform: scale(1.2,1.2);
 }
 
 .vertodo-texto{
@@ -240,7 +241,7 @@ footer img{
       "cat4 cat2 cat6"
       "cat4 cat5 cat6"
       "none1 cat5 none2";
-  }
+}
 
 .tituloGrid{
     grid-area: tituloGrid;
