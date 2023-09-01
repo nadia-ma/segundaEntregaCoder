@@ -1,0 +1,77 @@
+main{
+    .titulo{
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+        margin: 2rem auto;
+    }
+    .containerSomos{
+        font-family: $font;
+        height: auto;
+        padding: 0 0.5rem;
+        .text2{
+            text-align: justify;
+        }
+        .imgperfil{
+            margin-bottom: 1rem;
+            @media (max-width:575px){
+                grid-area: imgperfil;
+                width: auto;
+            }
+            @media (min-width:576px){
+                width: 100%;
+            }
+            @media (min-width:992px){
+                width: 45%;
+                height: max-content;
+                
+            }
+        }
+        .somos{
+        gap: 1.2rem;
+        margin: 0 1rem;
+        @media (max-width:575px){
+            flex-wrap: wrap;
+            margin: 0 0.5rem;
+        }
+        @media (min-width:576px){
+            flex-wrap: wrap;
+            margin: 0 0.5rem;
+        }
+        @media (min-width:992px){
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        }
+        .tituloVentajas{
+            font-size: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            @media (max-width:575px){
+                font-size: 30px;
+            }
+        }
+        .ventajas{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            @media (min-width:992px){
+                flex-wrap: nowrap;
+            }
+            .tarjeta{
+                @media (max-width:575px){
+                    margin: 0 2rem;
+                    font-size: 18px;
+                    
+                }
+                @media (min-width:576px){
+                    margin: 0 2rem;
+                }
+                @media (min-width:992px){
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

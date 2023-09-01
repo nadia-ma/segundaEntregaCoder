@@ -1,0 +1,76 @@
+main{
+    .tituloGrid{
+        grid-area: tituloGrid;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .container{
+        justify-content: center;
+        padding: 15px 0;
+        height: 140vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 1fr 3fr;
+        grid-auto-columns: 2fr;
+        gap: 15px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "cat1 none cat3"
+        "cat1 cat2 cat3"
+        "cat4 cat2 cat6"
+        "cat4 cat5 cat6"
+        "none1 cat5 none2";
+        @media (min-width:576px){
+            padding: 0 0.5rem;
+            max-width: max-content;
+            height: auto;
+            grid-template-rows: 0.2fr 0.8fr 0.2fr 0.8fr 0.2fr;
+        }
+        @media (min-width:768px){
+            max-width: max-content;
+            height: auto;
+            grid-template-rows: 0.2fr 0.8fr 0.2fr 0.8fr 0.2fr;
+        }
+        @media (min-width:992px){
+            max-width: 80%;
+            height: auto;
+        }
+        .cat1{
+        grid-area: cat1; 
+        width: auto;
+        }
+        .cat2{
+        grid-area: cat2; 
+        width: auto;
+        }
+        .cat3{
+        grid-area: cat3; 
+        width: auto;
+        }
+        .cat4{
+        grid-area: cat4; 
+        width: auto;
+        }
+        .cat5{
+        grid-area: cat5; 
+        width: auto;
+        }
+        .cat6{
+        grid-area: cat6; 
+        width: auto;
+        }
+    }
+    @media (max-width:575px){
+        .slider-container{
+            display: flex;
+            justify-content: space-between;
+            height: 53vh;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-gutter: auto;
+        }
+        .slider-container img{
+            scroll-snap-align: center;
+        }
+    }
+}
