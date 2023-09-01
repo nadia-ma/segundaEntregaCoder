@@ -1,3 +1,7 @@
+$font:'Lato', sans-serif;
+$morado: darkslateblue;
+$gradiente:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +9,7 @@
 }
 body{
     padding-bottom: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
 }
 .bg{
     background-color: #eaeaea;
@@ -15,14 +19,14 @@ header{
     z-index: 100;
     width: 100%;
     top: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     .mainBg{
-        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background-image: $gradiente;
         div{
             div{
                 .navbar-text{
                     list-style: none;
-                    font-family: 'Lato', sans-serif;
+                    font-family: $font;
                     .usuario{
                         width: 40px;
                         height: 40px;
@@ -50,7 +54,7 @@ main{
                 .titulo-vitrina{
                     font-size: 35px;
                     font-weight: bold;
-                    font-family: 'Lato', sans-serif;
+                    font-family: $font;
                     @media (max-width:575px){
                         font-size: 20px;
                     }
@@ -65,7 +69,7 @@ main{
                 }
                 .texto-vitrina{
                     font-size: 25px;
-                    font-family: 'Lato', sans-serif;
+                    font-family: $font;
                 }
             } 
         }
@@ -74,8 +78,7 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 5rem 1rem 3rem;
         .tarjeta{
             text-align: center;
             margin: 2rem 1rem 2rem 1rem;
@@ -145,21 +148,23 @@ main{
     .slider-productos{
         display: flex;
         flex-wrap: nowrap;
-        padding: 1.5rem 0 1rem 0;
+        padding: 2rem 0 1rem 0;
         @media (max-width:575px){
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
+            scrollbar-gutter: auto;
         }
         @media (min-width:576px){
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
+            scrollbar-gutter: auto;
         }
         @media (min-width:768px){
             display: flex;
-            width: 100vw;
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
             justify-content: space-between;
+            scrollbar-gutter: auto;
         }
         .tarjeta2{
             text-align: center;
@@ -176,7 +181,7 @@ main{
                 border-radius: 5%;
             }
             .precio{
-                color: darkslateblue;
+                color:$morado;
                 font-weight: bold;
             }
         }
@@ -189,22 +194,22 @@ main{
             display: flex;
             border-radius: 50px;
             padding: 0.5rem 1rem;
-            background-color: darkslateblue;
-            border-color: darkslateblue;
+            background-color: $morado;
+            border-color: $morado;
             margin-bottom: 1rem;
             &:hover{
                 background-color: white;
                 border-radius: 50px;
-                border-color: darkslateblue;
+                border-color: $morado;
                 transform: scale(1.2,1.2);
             }
             .vertodo-texto{
                 text-decoration: none;
-                color: #ffffff;
+                color: white;
                 font-size: 16px;
                 &:hover{
                     text-decoration: none;
-                    color: darkslateblue;
+                    color: $morado;
                 }
             }
         }
@@ -216,77 +221,52 @@ main{
         margin: 2rem auto;
     }
     .containerSomos{
-        font-family: 'Lato', sans-serif;
-        width: 100vw;
+        font-family: $font;
         height: auto;
         padding: 0 0.5rem;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 2fr 0.1fr 2fr;
-        grid-auto-columns: 2fr;
-        grid-auto-flow: row;
-        gap: 15px;
-        grid-template-areas:
-        "somos imgperfil"
-        "tituloVentajas tituloVentajas"
-        "ventajas ventajas";
-        @media (max-width:575px){
-            height: auto;
-            grid-template-columns: 1fr;
-            grid-template-rows: 0fr 0.5fr 0fr 0fr;
-            grid-template-areas:
-                "imgperfil"
-                "somos"
-                "tituloVentajas"
-                "ventajas";
-        }
-        @media (min-width:576px){
-            height: auto;
-            grid-template-columns: 1fr;
-            grid-template-rows: 0fr 0.5fr 0fr 0fr;
-            grid-template-areas:
-                "imgperfil"
-                "somos"
-                "tituloVentajas"
-                "ventajas";
-        }
-        @media (min-width:992px){
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 2fr 0.1fr;
-            grid-auto-columns: 2fr;
-            grid-auto-flow: row;
-            gap: 15px;
-            grid-template-areas:
-            "somos imgperfil"
-            "tituloVentajas tituloVentajas"
-            "ventajas ventajas";
-        }
         .text2{
             text-align: justify;
         }
         .imgperfil{
-            grid-area: imgperfil;
-            width: 40rem;
+            margin-bottom: 1rem;
             @media (max-width:575px){
+                grid-area: imgperfil;
                 width: auto;
             }
             @media (min-width:576px){
-                width: auto;
+                width: 100%;
+            }
+            @media (min-width:992px){
+                width: 45%;
+                height: max-content;
+                
             }
         }
         .somos{
-        grid-area: somos;
+        gap: 1.2rem;
+        margin: 0 1rem;
+        @media (max-width:575px){
+            flex-wrap: wrap;
+            margin: 0 0.5rem;
+        }
+        @media (min-width:576px){
+            flex-wrap: wrap;
+            margin: 0 0.5rem;
+        }
+        @media (min-width:992px){
+            display: flex;
+            flex-wrap: nowrap;
+        }
         }
         .tituloVentajas{
-            grid-area: tituloVentajas;
             font-size: 2rem;
             text-align: center;
+            margin: 2rem 0;
             @media (max-width:575px){
                 font-size: 30px;
             }
         }
         .ventajas{
-            grid-area: ventajas;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
@@ -317,8 +297,6 @@ main{
     .container{
         justify-content: center;
         padding: 15px 0;
-        margin: 0 1rem;
-        width: 100vw;
         height: 140vh;
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
@@ -344,7 +322,7 @@ main{
             grid-template-rows: 0.2fr 0.8fr 0.2fr 0.8fr 0.2fr;
         }
         @media (min-width:992px){
-            padding: 0 10rem;
+            max-width: 80%;
             height: auto;
         }
         .cat1{
@@ -379,14 +357,14 @@ main{
             height: 53vh;
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
+            scrollbar-gutter: auto;
         }
         .slider-container img{
             scroll-snap-align: center;
         }
     }
     .containerBlog{
-        font-family: 'Lato', sans-serif;
-        width: 100vw;
+        font-family:$font;
         height: 60vh;
         padding: 0 0.5rem;
         display: grid;
@@ -449,6 +427,8 @@ main{
             grid-area: compras;
             .text2{
                 text-align: justify;
+                list-style: none;
+                padding-left: 0;
             }
         }
         .imgCompras{
@@ -498,6 +478,9 @@ main{
             grid-template-areas:
             "tituloRegistrate tituloInicio"
             "formularioRegistro formularioInicio";
+        }
+        .casilla{
+            padding: 0.5rem 0;
         }
         .tituloCuenta{
             text-align: center;
@@ -580,10 +563,12 @@ main{
         img{
             @media (max-width:575px){
                 scroll-snap-align: center;
+                scrollbar-gutter: auto;
                 margin: 0 0.5rem;
             }
             @media (min-width:576px){
                 scroll-snap-align: center;
+                scrollbar-gutter: auto;
                 margin: 0 0.5rem;
                 width: 50%;
             }
@@ -601,7 +586,6 @@ main{
         @media (min-width:992px){
             display: flex;
             flex-direction: row;
-            width: 100vw;
             justify-content: center;
             margin: 2rem auto; 
         }
@@ -640,7 +624,7 @@ footer{
     padding-top: 30px;
     padding-bottom: 50px;
     margin: 1rem auto 0;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-image: $gradiente;
     justify-content: center;
     justify-content: space-evenly;
     @media (max-width:575px){
